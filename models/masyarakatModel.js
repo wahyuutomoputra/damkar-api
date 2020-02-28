@@ -21,6 +21,9 @@ const Masyarakat = sequelize.define('Masyarakat',{
     email: {
         type: Sequelize.STRING
     },
+    password: {
+        type: Sequelize.STRING
+    }
 })
 
 module.exports = Masyarakat;

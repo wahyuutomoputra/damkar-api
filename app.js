@@ -5,6 +5,7 @@ const fileUpload = require('express-fileupload');
 
 const masyarakatRoutes = require('./routes/masyarakat');
 const laporanRoutes = require('./routes/laporan');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 app.use('/masyarakat', masyarakatRoutes);
 app.use('/laporan', laporanRoutes);
+app.use('/auth', authRoutes);
 
 
 sequelize.sync().then(result => {

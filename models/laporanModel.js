@@ -21,7 +21,7 @@ const Laporan = sequelize.define('Laporan',{
     foto: {
         type: Sequelize.STRING
     },
-    id_masyarkat: {
+    idMasyarkat: {
         type: Sequelize.INTEGER
     }
 })
