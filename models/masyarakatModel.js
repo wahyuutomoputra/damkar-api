@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 
 const sequelize = require('../config/database');
 
-const Masyarakat = sequelize.define('Masyarakat',{
+const Masyarakat = sequelize.define('Masyarakat',
+{
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -24,6 +25,9 @@ const Masyarakat = sequelize.define('Masyarakat',{
     password: {
         type: Sequelize.STRING
     }
+},
+{
+    freezeTableName: true
 })
 
 module.exports = Masyarakat;

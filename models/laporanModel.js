@@ -2,7 +2,9 @@ const Sequelize = require('sequelize');
 
 const sequelize = require('../config/database');
 
-const Laporan = sequelize.define('Laporan',{
+const Laporan = sequelize.define('Laporan',
+
+{
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -24,6 +26,9 @@ const Laporan = sequelize.define('Laporan',{
     idMasyarkat: {
         type: Sequelize.INTEGER
     }
+},
+{
+    freezeTableName: true
 })
 
 module.exports = Laporan;
